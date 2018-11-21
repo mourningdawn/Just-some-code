@@ -111,7 +111,7 @@ def Hard():
         print (dieRoll1, dieRoll2, dieRoll3, "Total of dice rolls is: {}".format(dieRoll1 + dieRoll2 + dieRoll3)) #Appends it to the location at the {}
         print(guess)
     #you guess the right number and score goes up
-        if int(guess) == (dieRoll1 + dieRoll2 + dieRoll3)):
+        if int(guess) == (dieRoll1 + dieRoll2 + dieRoll3):
             print ("Congrats you won round 1 of 10") #will always print out round 1 of 10 when the round should be going up with each turn
             print ("You are at a score of " + str(score + 1))# score stays at 1 when it should be going up
             print ("You are at " + str(turns + 1) + " turns.") #turns stays at 1 and should be going up with each turn
