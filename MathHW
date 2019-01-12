@@ -1,5 +1,7 @@
-#Just a simple program I made to solve my math homework
+#just a simple code i made for my math hw
 import math
+import sympy
+from mpmath import*
 love = 0
 while love == 0:
     print("Are you trying to find: Sine, Cosine, Tangent, or Cotangent?")
@@ -10,14 +12,15 @@ while love == 0:
       print("What is your second number? ")
       y = input(":")
       Sine = math.sin(int(x)/int(y))
-      print(Sine)
-      print ("Do you need to find the cosecant? Y or N")
+      print (Sine)
+      print ("Do you need to find the cosecant? Yes or no")
       uInput = input(":")
-      if uInput.lower() == "Y":
-        Cosecant = math.csc(1/int(Sine))
-        print (Cosecant)
-      if uInput.lower() == "N":
-        print("Alright see ya later")
+      if uInput.lower() == "yes":
+        print("Lets find the cosecant")
+        Cosecant = csc(1/int(degrees(Sine)))
+        print (degrees(Cosecant))
+        if uInput.lower() == "N":
+          print("Alright see ya later")
 
     if uInput.lower() == "cosine":
       print("What is your first number? ")
@@ -26,37 +29,39 @@ while love == 0:
       y = input(":")
       Cosine = math.cos(int(x)/int(y))
       print(Cosine)
-      print ("Do you need to find the secant? Y or N")
+      print ("Do you need to find the secant? yep or nope")
       uInput = input(":")
-      if uInput.lower() == "Y":
-        Secant = math.sec(1/int(Cosine))
+      if uInput.lower() == "Yep":
+        print("Lets find secant")
+        Secant = sec(1/int(degrees(Cosine)))
         print(Secant)
-      if uInput.lower() == "N":
+      if uInput.lower() == "nope":
         print ("Alright see ya later")
 
-      if uInput.lower() == "tangent":
-        print("What is your first number? ")
-        x = input(":")
-        print("What is your second number? ")
-        y = input(":")
-        Tangent = math.tan(int(x)/int(y))
-        print(Tangent)
+    if uInput.lower() == "tangent":
+      print("What is your first number? ")
+      x = input(":")
+      print("What is your second number? ")
+      y = input(":")
+      Tangent = math.tan(int(x)/int(y))
+      print(Tangent)
 
-      if uInput.lower() == "cotangent":
-        print("First we need to find the sine.")
-        print("What is your first number? ")
-        x = input(":")
-        print("What is your second number? ")
-        y = input(":")
-        Sine = math.sin(int(x)/int(y))
-        print(Sine)
-        print("Now we need to find cosine")
-        print ("what is your first number? ")
-        w = input(":")
-        print ("What is your second number? ")
-        z = input(":")
-        Cosine = math.cos(int(w)/int(z))
-        print(Cosine)
-        Cotangent = math.cot(int(Cosine)/int(Sine))
-        print(Cotangent)
-        print("Have a nice day")
+    if uInput.lower() == "cotangent":
+      print("First we need to find the sine.")
+      print("What is your first number? ")
+      x = input(":")
+      print("What is your second number? ")
+      y = input(":")
+      Sine = math.sin(int(x)/int(y))
+      print(Sine)
+      print("Now we need to find cosine")
+      print ("what is your first number? ")
+      w = input(":")
+      print ("What is your second number? ")
+      z = input(":")
+      Cosine = math.cos(int(w)/int(z))
+      print(Cosine)
+      Cotangent = cot(int(degrees(Cosine))/int(degrees(Sine)))
+      print(Cotangent)
+      print("Have a nice day")
+      love + 1
