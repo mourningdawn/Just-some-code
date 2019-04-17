@@ -1,0 +1,19 @@
+main {
+  margin-top: 9em;
+  margin-bottom: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding-right: 10px;
+}
+body{
+  background-color: powderblue;
+  padding-left: 10px;
+  padding-right: 20px;
+  margin: 5em;
+}
+table{
+
+}
+td{
+  padding: 10px;
+}

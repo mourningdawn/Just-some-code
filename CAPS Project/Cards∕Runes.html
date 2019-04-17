@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Binding of Isaac</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Information about Binding of Isaac">
+  <meta name="author" content="Nik Meister and Matthew Moore">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CSS/myCSS.css" type="text/css" />
+
+</head>
+
+<body style="background-color:powderblue;">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top">
+
+      <div class="container">
+        <figure class="navbar-brand">
+          <img src="ImagesFolder/BindingofIsaac.png" alt="BoI" height="70" width="70" />
+          <figcaption class="text-center">
+            BoI
+          </figcaption>
+        </figure>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item" style="height: 110px; vertical-align: top;">
+              <a class="nav-link active" href="BindingOfIsaac.html" id="homePage">Home Page</a>
+            </li>
+            <li class="nav-item dropdown" style="height: 40px;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                The Game
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="About.html">About</a>
+                <a class="dropdown-item" href="Achievements.html">Achievements</a>
+                <a class="dropdown-item" href="Attributes.html">Attributes</a>
+                <a class="dropdown-item" href="Bosses.html">Bosses</a>
+                <a class="dropdown-item" href="Cards∕Runes.html">Cards/Runes</a>
+                <a class="dropdown-item" href="Challenges.html">Challenges</a>
+                <a class="dropdown-item" href="Chapters.html">Chapters</a>
+                <a class="dropdown-item" href="Characters.html">Characters</a>
+                <a class="dropdown-item" href="Items.html">Items</a>
+                <a class="dropdown-item" href="Monsters.html">Monsters</a>
+                <a class="dropdown-item" href="Rooms.html">Rooms</a>
+                <a class="dropdown-item" href="Transformations.html">Transformations</a>
+                <a class="dropdown-item" href="Trinkets.html">Trinkets</a>
+              </div>
+            </li>
+            <img src="ImagesFolder/BOITitle.png" class="ml-3" alt="BoI" height="70" width="800"/>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" role="main">
+    <h1 class="text-center">Cards and Runes</h1>
+    <h2 class="text-center">When on the ground, these cards look like:
+      <img src="ImagesFolder/Tarrot.png" alt="Tarrot" height="40px" width="40px"/>
+    </h2>
+    <table class="cards" border="2" align="center">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Icon</th>
+        <th>Message</th>
+        <th>Effect</th>
+      </tr>
+      <tr>
+        <td>0 - The Fool</td>
+        <td>1</td>
+        <td>
+          <img src="ImagesFolder/fool.png" alt="Fool" height="40px" width="30px"/>
+        </td>
+        <td>Where journey begins</td>
+        <td>Teleports Isaac back to the starting room of a floor</td>
+      </tr>
+      <tr>
+        <td>I - The Magician</td>
+        <td>2</td>
+        <td>
+          <img src="ImagesFolder/magician.png" alt="Magician" height="40px" width="30px"/>
+        </td>
+        <td>May you never miss your goal</td>
+        <td>Grants homing tears for the current room</td>
+      </tr>
+      <tr>
+        <td>II - The High Priestess</td>
+        <td>3</td>
+        <td>
+          <img src="ImagesFolder/priestess.png" alt="Priestess" height="40px" width="30px"/>
+        </td>
+        <td>Mother is watching you</td>
+        <td>Mom's dismembered leg is called down to deal 300 damage to anything it stomps. It will always stomp on the enemy
+          with the most health. If used in an empty room or during the fight with Mom, it will stop Isaac instead.</td>
+      </tr>
+      <tr>
+        <td>III - The Empress</td>
+        <td>4</td>
+        <td>
+          <img src="ImagesFolder/empress.png" alt="Empress" height="40px" width="30px"/>
+        </td>
+        <td>May your rage bring power</td>
+        <td>Triggers the Whore of Babylon effect (+1.5 damage, +0.3 speed), but without the need for Isaac to have a red heart or less of health</td>
+      </tr>
+      <tr>
+        <td>IV - The Emperor</td>
+        <td>5</td>
+        <td>
+          <img src="ImagesFolder/emporer.png" alt="Emperor" height="40px" width="30px"/>
+        </td>
+        <td>Challenge me!</td>
+        <td>Teleports Isaac into the Boss Room of a flooor.</td>
+      </tr>
+      <tr>
+        <td>V - The Hierophant</td>
+        <td>6</td>
+        <td>
+          <img src="ImagesFolder/hierophant.png" alt="Hierophant" height="40px" width="30px"/>
+        </td>
+        <td>Two prayers for the lost</td>
+        <td>Spawns 2 soul hearts</td>
+      </tr>
+      <tr>
+        <td>VI - The Lovers</td>
+        <td>7</td>
+        <td>
+          <img src="ImagesFolder/lovers.png" alt="Lovers" height="40px" width="30px"/>
+        </td>
+        <td>May you prosper and be in good health</td>
+        <td>Spawns 2 full red hearts. If used in a black heart or eternal heart-containing Super Secret Room, it will spawn those types of hearts instead.</td>
+      </tr>
+      <tr>
+        <td>VII - The Chariot</td>
+        <td>8</td>
+        <td>
+          <img src="ImagesFolder/chariot.png" alt="Chariot" height="40px" width="30px"/>
+        </td>
+        <td>May nothing stand before you</td>
+        <td>Grants the temporary invulnerability effect of My Little Unicorn.</td>
+      </tr>
+      <tr>
+        <td>VIII - Justice</td>
+        <td>9</td>
+        <td>
+          <img src="ImagesFolder/justice.png" alt="Justice" height="40px" width="30px"/>
+        </td>
+        <td>May your future become balanced</td>
+        <td>Spawns one of each consumable drop (a heart, a key, a bomb, and a coin). Hearts have the chance to spawn as either a Half Red heart or a 1+1 Free Heart.</td>
+      </tr>
+      <tr>
+        <td>IX - The Hermit</td>
+        <td>10</td>
+        <td>
+          <img src="ImagesFolder/hermit.png" alt="Hermit" height="40px" width="30px"/>
+        </td>
+        <td>May you see what life has to offer</td>
+        <td>Teleports Isaac to the shop. If there is no shop, this will act as a random teleport. If the shop has not yet been accessed, this card will
+        unlock the door without requiring a key (as long as the player exits through the main entrance).</td>
+      </tr>
+      <tr>
+        <td>X - Wheel of Fortune</td>
+        <td>11</td>
+        <td>
+          <img src="ImagesFolder/fortune.png" alt="Fortune" height="40px" width="30px"/>
+        </td>
+        <td>Spin the wheel of destiny</td>
+        <td>Spawns an arcade machine (Slot Machine or Fortune Teller).</td>
+      </tr>
+      <tr>
+        <td>XI - Strength</td>
+        <td>12</td>
+        <td>
+          <img src="ImagesFolder/strength.png" alt="Strength" height="40px" width="30px"/>
+        </td>
+        <td>May your power bring rage</td>
+        <td>Grants the effect of Magic Mushroom (increases all of Isaac's stats except tears), but adds one (temporary) heart container for the
+        current room as opposed to a permanent one.</td>
+      </tr>
+      <tr>
+        <td>XII - The Hanged Man</td>
+        <td>13</td>
+        <td>
+          <img src="ImagesFolder/hanged_man.png" alt="Hanged Man" height="40px" width="30px"/>
+        </td>
+        <td>May you find enlightenment</td>
+        <td>Removes Isaac's body, allowing him to fly around for the duration of the room (same effect as Transcendence).</td>
+      </tr>
+      <tr>
+        <td>XIII - Death</td>
+        <td>14</td>
+        <td>
+          <img src="ImagesFolder/death.png" alt="Death" height="40px" width="30px"/>
+        </td>
+        <td>Lay waste to all that oppose you</td>
+        <td>Deals 40 damage to all enemies in the room (same effect as The Necronomicon)</td>
+      </tr>
+      <tr>
+        <td>XIV - Temperance</td>
+        <td>15</td>
+        <td>
+          <img src="ImagesFolder/temperance.png" alt="Temperance" height="40px" width="30px"/>
+        </td>
+        <td>May you be pure in heart</td>
+        <td>Spawns a blood donation machine</td>
+      </tr>
+      <tr>
+        <td>XV - The Devil</td>
+        <td>16</td>
+        <td>
+          <img src="ImagesFolder/devil.png" alt="Devil" height="40px" width="30px"/>
+        </td>
+        <td>Revel in the power of darkness</td>
+        <td>Grants Issac a temporary +2 damage for teh current room (same effect as the Book of Belial).</td>
+      </tr>
+      <tr>
+        <td>XVI - The Tower</td>
+        <td>17</td>
+        <td>
+          <img src="ImagesFolder/tower.png" alt="Tower" height="40px" width="30px"/>
+        </td>
+        <td>Destruction brings creation</td>
+        <td>Spawns 6 troll bombs randomly around the room (same effect as teh Anarchist Cookbook).</td>
+      </tr>
+      <tr>
+        <td>XVII - The Stars</td>
+        <td>18</td>
+        <td>
+          <img src="ImagesFolder/stars.png" alt="Stars" height="40px" width="30px"/>
+        </td>
+        <td>May you find what you desire</td>
+        <td>Teleports Isaac to the Treasure Room. If there is no Treasure Room, this will act as a random teleport. Randomly chooses a Treasure Room
+        on Curse of the Labyrinth. If the Treasure Room has not yet been accessed, this card will unlock the door without requiring a key
+      (as long as the player exits through the main entrance).</td>
+      </tr>
+      <tr>
+        <td>XVIII - The Moon</td>
+        <td>19</td>
+        <td>
+          <img src="ImagesFolder/moon.png" alt="Moon" height="40px" width="30px"/>
+        </td>
+        <td>May you find all you have lost</td>
+        <td>Teleports the player to the Secret Room. This card will open one random wall once inside the Secret Room, so you can leave even if you don't
+        have any bombs available.</td>
+      </tr>
+      <tr>
+        <td>XIX - The Sun</td>
+        <td>20</td>
+        <td>
+          <img src="ImagesFolder/sun.png" alt="Sun" height="40px" width="30px"/>
+        </td>
+        <td>May the light heal and enlighten you</td>
+        <td>Restores Isaac's full health, deals 100 damage to all enemies in the room, and reveals the map for the current floor, except the Super Secret Room.</td>
+      </tr>
+      <tr>
+        <td>XX - Judgement</td>
+        <td>21</td>
+        <td>
+          <img src="ImagesFolder/judgement.png" alt="Judgenent" height="40px" width="30px"/>
+        </td>
+        <td>Judge lest ye be judged</td>
+        <td>Spawns a Beggar</td>
+      </tr>
+      <tr>
+        <td>XXI - The World</td>
+        <td>22</td>
+        <td>
+          <img src="ImagesFolder/world.png" alt="World" height="40px" width="30px"/>
+        </td>
+        <td>Open your eyes and see</td>
+        <td>Reveals the entire floor, except for the Super Secret Room. Has no effect if under the effect of Curse of the Lost or Amnesia.</td>
+      </tr>
+    </table>
+    <h1 class="text-center">Playing Cards</h1>
+    <h2 class="text-center">When on the ground, these cards look like:
+      <img src="ImagesFolder/PlayingCard.png" alt="Playing Card" height="40px" width="40px"/>
+    </h2>
+    <table border="2" align="center">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Icon</th>
+        <th>Message</th>
+        <th>Effect</th>
+      </tr>
+      <tr>
+        <td>2 of Clubs</td>
+        <td>23</td>
+        <td>
+          <img src="ImagesFolder/clubs.png" alt="2 of Clubs" height="40px" width="30px"/>
+        </td>
+        <td>Item Multiplier</td>
+        <td>Doubles all your bombs. If you have no bombs, gives you 2 instead.</td>
+      </tr>
+      <tr>
+        <td>2 of Diamonds</td>
+        <td>24</td>
+        <td>
+          <img src="ImagesFolder/diamonds.png" alt="2 of Diamonds" height="40px" width="30px"/>
+        </td>
+        <td>Item Multiplier</td>
+        <td>Doubles all your coins. If you have no coins, gives you 2 instead.</td>
+      </tr>
+      <tr>
+        <td>2 of Spades</td>
+        <td>25</td>
+        <td>
+          <img src="ImagesFolder/spades.png" alt="2 of Spades" height="40px" width="30px"/>
+        </td>
+        <td>Item Multiplier</td>
+        <td>Doubles all your keys. If you have no keys, gives you 2 instead.</td>
+      </tr>
+      <tr>
+        <td>2 of Hearts</td>
+        <td>26</td>
+        <td>
+          <img src="ImagesFolder/hearts.png" alt="2 of Hearts" height="40px" width="30px"/>
+        </td>
+        <td>Item Multiplier</td>
+        <td>Doubles Isaac's current number of red hearts. Does not affect Eternal Hearts, Soul Hearts, or Black Hearts. Doesn't add new heart containers,
+        just fills empty ones.</td>
+      </tr>
+      <tr>
+        <td>Ace of Clubs</td>
+        <td>27</td>
+        <td>
+          <img src="ImagesFolder/Aclubs.png" alt="Ace of Clubs" height="40px" width="30px"/>
+        </td>
+        <td>Convert all</td>
+        <td>Turns all pickups and chests in the room into bombs.</td>
+      </tr>
+      <tr>
+        <td>Ace of Diamonds</td>
+        <td>28</td>
+        <td>
+          <img src="ImagesFolder/Adiamonds.png" alt="Ace of Diamonds" height="40px" width="30px"/>
+        </td>
+        <td>Convert all</td>
+        <td>Turns all pickups and chests in the room into coins.</td>
+      </tr>
+      <tr>
+        <td>Ace of Spades</td>
+        <td>29</td>
+        <td>
+          <img src="ImagesFolder/Aspades.png" alt="Ace of Spades" height="40px" width="30px"/>
+        </td>
+        <td>Convert all</td>
+        <td>Turns all pickups and chests in the room into keys.</td>
+      </tr>
+      <tr>
+        <td>Ace of Hearts</td>
+        <td>30</td>
+        <td>
+          <img src="ImagesFolder/Ahearts.png" alt="Ace of Hearts" height="40px" width="30px"/>
+        </td>
+        <td>Convert all</td>
+        <td>Turns all pickups and chests in the room into random heart pickups</td>
+      </tr>
+      <tr>
+        <td>Joker</td>
+        <td>31</td>
+        <td>
+          <img src="ImagesFolder/joker.png" alt="Joker" height="40px" width="30px"/>
+        </td>
+        <td>???</td>
+        <td>Teleports you to the Devil Room or Angel Room.</td>
+      </tr>
+    </table>
+    <h1 class="text-center">Special Cards</h1>
+    <h2 class="text-center">Magic: The Gathering Card backs</h2>
+    <h2 class="text-center">When on the ground, these cards look like:
+      <img src="ImagesFolder/PlayingCard.png" alt="Playing Card" height="40px" width="40px"/> or <img src="ImagesFolder/Magic.png" alt="Magic card" height="40px" width="40px"/>
+    </h2>
+    <table border="2" align="center">
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Icon</th>
+        <th>Message</th>
+        <th>Effect</th>
+      </tr>
+      <tr>
+        <td>Chaos Card</td>
+        <td>42</td>
+        <td>
+          <img src="ImagesFolder/Chaos.png" alt="chaos" height="40px" width="30px"/>
+        </td>
+        <td>???</td>
+        <td>Throws the card to kill anything in its path. Opens normal doors.</td>
+      </tr>
+      <tr>
+        <td>Huge Growth</td>
+        <td>52</td>
+        <td>
+          <img src="ImagesFolder/Growth.png" alt="Growth" height="40px" width="30px"/>
+        </td>
+        <td> Become immense!</td>
+        <td>Makes Isaac large for the current room, increasing his range and damage.</td>
+      </tr>
+      <tr>
+        <td> Ancient Recall</td>
+        <td>53</td>
+        <td>
+          <img src="ImagesFolder/Recall.png" alt="Recall" height="40px" width="30px"/>
+        </td>
+        <td>Draw 3 cards</td>
+        <td>Spawns 3 random cards.</td>
+      </tr>
+      <tr>
+        <td>Era Walk</td>
+        <td>54</td>
+        <td>
+          <img src="ImagesFolder/Walk.png" alt="Walk" height="40px" width="30px"/>
+        </td>
+        <td>Savor the moment</td>
+        <td>For the current room, enemies are slowed, Isaac's speed is increased, and his shot speed is decreased.</td>
+      </table>
+        <h2 class="text-center">Credit Card backs</h2>
+        <h2 class="text-center">When on the ground, these cards look like:
+          <img src="ImagesFolder/PlayingCard.png" alt="playing card" height="40px" width="40px"/> or <img src="ImagesFolder/creditcard2.png" alt="Credit card" height="40px" width="40px"/>
+        </h2>
+          <table border="2" align="center">
+            <tr>
+              <th>Name</th>
+                <th>ID</th>
+                <th>Icon</th>
+                <th>Message</th>
+                <th>Effect</th>
+              </tr>
+              <tr>
+                <td>Credit Card</td>
+                <td>43</td>
+                <td>
+                  <img src="ImagesFolder/CreditCard.png" alt="Creditcard" height="40px" width="30px"/>
+                </td>
+                <td>Charge it!</td>
+                <td>Converts all the items in the Shop or Devil Room into pickups or items on pedestals, allowing them to be picked up for free.</td>
+              </table>
+              <h2 class="text-center"> Playing Card Backs</h2>
+              <h2 class="text-center">When on the ground, these cards look like:
+                <img src="ImagesFolder/PlayingCard.png" alt="Playingcard" height="40px" width="40px"/>
+              </h2>
+              <table border="2" align="center">
+                <tr>
+                  <th>Name</th>
+                    <th>ID</th>
+                    <th>Icon</th>
+                    <th>Message</th>
+                    <th>Effect</th>
+                  </tr>
+                  <tr>
+                    <td>Rules Card</td>
+                    <td>44</td>
+                    <td>
+                      <img src="ImagesFolder/RulesCard.png" src="Rules" height="40px" width="30px"/>
+                    </td>
+                    <td>???</td>
+                    <td>Displays a cryptic statement on the screen, similar to the Fortune teller. These messages (often) provide hints on bosses, bonus areas, etc.</td>
+                  </tr>
+                  <tr>
+                    <td>Suicide King</td>
+                    <td>46</td>
+                    <td>
+                      <img src="ImagesFolder/suicide.png" alt="suicide" height="40px" width="30px"/>
+                    </td>
+                    <td>A true ending?</td>
+                    <td>Kills Isaac and spwans lots of pickups, items, and or/chests in the same room.</td>
+                  </tr>
+                  <tr>
+                    <td>? Card</td>
+                    <td>48</td>
+                    <td>
+                      <img src="ImagesFolder/$.png" alt="?" height="40ox" width="30px"/>
+                    </td>
+                    <td>Double active</td>
+                    <td>When used, copies the effect of Isaac's currently held activated collectible item</td>
+                  </tr>
+                </table>
+                <h2 class="text-center"> Card Against Humanity Backs</h2>
+                <h2 class="text-center">When on the ground, these cards look like:
+                  <img src="ImagesFolder/PlayingCard.png" alt="Playingcard" height="40px" width="40px"/> or <img src="ImagesFolder/humanity2.png" alt="humanity" height="40px" width="40px"/>
+                </h2>
+                <table border="2" align="center">
+                  <tr>
+                    <th>Name</th>
+                      <th>ID</th>
+                      <th>Icon</th>
+                      <th>Message</th>
+                      <th>Effect</th>
+                    </tr>
+                    <tr>
+                      <td>A Card Against Humanity</td>
+                      <td>45</td>
+                      <td>
+                        <img src="ImagesFolder/Humanity.png" alt="Humanity" height="40px" width="30px"/>
+                      </td>
+                      <td>Something stinks...</td>
+                      <td>Covers the entire room with poop. The process is not instant, and the room will not get filled if you leave it before it's done filling</td>
+                    </tr>
+                  </table>
+                  <h2 class="text-center">Chance Card Backs</h2>
+                  <h2 class="text-center">When on the ground, these cards look like:
+                    <img src="ImagesFolder/PlayingCard.png" alt="Playingcard" height="40px" width="40px"/> or <img src="ImagesFolder/chance.png" alt="Chance" height="40px" width="40px"/>
+                  </h2>
+                  <table border="2" align="center">
+                    <tr>
+                      <th>Name</th>
+                        <th>ID</th>
+                        <th>Icon</th>
+                        <th>Message</th>
+                        <th>Effect</th>
+                      </tr>
+                      <tr>
+                        <td>Get out of Jail Free Card</td>
+                        <td>47</td>
+                        <td>
+                          <img src="ImagesFolder/jail.png" alt="jail" height="40px" width="30px"/>
+                        </td>
+                        <td>Open Sesame</td>
+                        <td>Upon use, opens all doors in the current room (including the golden door at The Chest / Dark Room), similar to Dad's Key.</td>
+                      </tr>
+                    </table>
+                    <h2 class="text-center">Holy Card Backs</h2>
+                    <h2 class="text-center">When on the ground, these cards look like:
+                      <img src="ImagesFolder/holy2.png" alt="Holy" height="40px" width="40px"/>
+                    </h2>
+                    <table border="2" align="center">
+                      <tr>
+                        <th>Name</th>
+                          <th>ID</th>
+                          <th>Icon</th>
+                          <th>Message</th>
+                          <th>Effect</th>
+                        </tr>
+                        <tr>
+                          <td>Holy Card</td>
+                          <td>51</td>
+                          <td>
+                            <img src="ImagesFolder/Holy.png" alt="Holy" height="40px" width="30px"/>
+                          </td>
+                          <td>You feel protected</td>
+                          <td>Grants the Holy Mantle effect for the current room.</td>
+                        </tr>
+                      </table>
+                      <h1 class="text-center">Runes</h1>
+                      <h2 class="text-center">Left Pointing Runes</h2>
+                      <h2 class="text-center">When on the ground, these cards look like:
+                        <img src="ImagesFolder/LeftRune.png" alt="left rune" height="40px" width="30px"/>
+                      </h2>
+                      <table border="2" align="center">
+                        <tr>
+                          <th>Rune</th>
+                            <th>ID</th>
+                            <th>Icon</th>
+                            <th>Message</th>
+                            <th>Effect</th>
+                          </tr>
+                          <tr>
+                            <td>Hagalaz</td>
+                            <td>32</td>
+                            <td>
+                              <img src="ImagesFolder/Hagalaz.png" alt="Hagalaz" height="40px" width="40px"/>
+                            </td>
+                            <td>Destruction</td>
+                            <td>Destroys all breakable objects in the room. Does not affect Key Blocks.</td>
+                          </tr>
+                            <tr>
+                              <td>Jera</td>
+                              <td>33</td>
+                              <td>
+                                <img src="ImagesFolder/Jera.png" alt="Jera" height="40px" width="40px"/>
+                              </td>
+                              <td>Abundance</td>
+                              <td>Clones all pickups and chests in a room (including shop pickups; the clones can then be picked up for free). Cloned chests will contain exactly the same type of items:
+                                if the original contains a pickup, so will the clone; the same is true for Collectibles. Cannot clone other Jera runes and trinkets.</td>
+                            </tr>
+                              <tr>
+                                <td>Ehwaz</td>
+                                <td>34</td>
+                                <td>
+                                  <img src="ImagesFolder/Ehwaz.png" alt="Ehwaz" height="40px" width="40px"/>
+                                </td>
+                                <td>Passage</td>
+                                <td>Creates a trapdoor leading to the next floor. Has an estimated 1/12 (8%) chance to spawn a door to a Crawl Space instead.</td>
+                              </tr>
+                                <tr>
+                                  <td>Dagaz</td>
+                                  <td>35</td>
+                                  <td>
+                                    <img src="ImagesFolder/Dagaz.png" alt="Dagaz" height="40px" width="40px"/>
+                                  </td>
+                                  <td>Purity</td>
+                                  <td>Removes any curses from the current floor and grants a soul heart. (This will not remove Curse of the Labyrinth.)</td>
+                                </tr>
+                        </table>
+                        <h2 class="text-center">Right Pointing Runes</h2>
+                        <h2 class="text-center">When on the ground, these cards look like:
+                          <img src="ImagesFolder/RightRune.png" alt="Right rune" height="40px" width="30px"/>
+                        </h2>
+                        <table border="2" align="center">
+                          <tr>
+                            <th>Rune</th>
+                              <th>ID</th>
+                              <th>Icon</th>
+                              <th>Message</th>
+                              <th>Effect</th>
+                            </tr>
+                            <tr>
+                              <td>Ansuz</td>
+                              <td>36</td>
+                              <td>
+                                <img src="ImagesFolder/Ansuz.png" alt="Ansuz" height="40px" width="40px"/>
+                              </td>
+                              <td>Vision</td>
+                              <td>Reveals the whole map, including the Secret Room and the Super Secret Room.</td>
+                            </tr>
+                              <tr>
+                                <td>Perthro</td>
+                                <td>37</td>
+                                <td>
+                                  <img src="ImagesFolder/Perthro.png" alt="Perthro" height="40px" width="40px"/>
+                                </td>
+                                <td>Change</td>
+                                <td>Rerolls all pedestal items in the room. (This is the same effect as The D6.)</td>
+                              </tr>
+                                <tr>
+                                  <td>Berkano</td>
+                                  <td>38</td>
+                                  <td>
+                                    <img src="ImagesFolder/Berkano.png" alt="Berkano" height="40px" width="40px"/>
+                                  </td>
+                                  <td>Companionship</td>
+                                  <td>Summons 3 friendly blue flies and 3 friendly blue spiders.</td>
+                                </tr>
+                                  <tr>
+                                    <td>Algiz</td>
+                                    <td>39</td>
+                                    <td>
+                                      <img src="ImagesFolder/Algiz.png" alt="Algiz" height="40px" width="40px"/>
+                                    </td>
+                                    <td>Resistance</td>
+                                    <td>Grants a shield which lasts for 30 seconds.</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Blank Rune</td>
+                                    <td>4-</td>
+                                    <td>
+                                      <img src="ImagesFolder/RightRune.png" alt="BlankRune" height="40px" width="30px"/>
+                                    </td>
+                                    <td>???</td>
+                                    <td>Grants a random rune effect. has a 25% chance to respawn another Blank Rune upon use.</td>
+                                  </tr>
+                          </table>
+                          <h2 class="text-center">Other Runes</h2>
+                          <table border="2" align="center">
+                            <tr>
+                              <th>Rune</th>
+                                <th>ID</th>
+                                <th>Icon</th>
+                                <th>Message</th>
+                                <th>Effect</th>
+                              </tr>
+                              <tr>
+                                <td>Black Rune</td>
+                                <td>41</td>
+                                <td>
+                                  <img src="ImagesFolder/BlackRune.png" alt="Black rune" height="40px" width="30px"/>
+                                </td>
+                                <td>Void</td>
+                                <td>Deals 40 damage to all enemies in the room. Consumes all pickups in the room and turns them into blue flies and spiders. Consumes all pedestal items in the room
+                                   and turns them into random stat upgrades.</td>
+                              </tr>
+                            </table>
+                            <h2 class="text-center">Other</h2>
+                            <h3 class="text-center">These are items other than cards and runes(and pills) that take up the consumable slot. When on the ground, each of these items are uniquely identifiable
+                              by their respective icon.</h3>
+                            <table border="2" align="center">
+                              <tr>
+                                <th>Name</th>
+                                  <th>ID</th>
+                                  <th>Icon</th>
+                                  <th>Message</th>
+                                  <th>Effect</th>
+                                </tr>
+                                <tr>
+                                  <td>Dice Shard</td>
+                                  <td>49</td>
+                                  <td>
+                                    <img src="ImagesFolder/Diceshard.png" alt="Dice shard" height="40px" width="40px"/>
+                                  </td>
+                                  <td>D6 + D20</td>
+                                  <td>Upon use, activates the effects of the D6 and the D20 at the same time.</td>
+                                </tr>
+                                <tr>
+                                  <td>Emergency Contact</td>
+                                  <td>50</td>
+                                  <td>
+                                    <img src="ImagesFolder/Emergency.png" alt="Emergency Contact" height="40px" width="40px"/>
+                                  </td>
+                                  <td>Help from above</td>
+                                  <td>When used, will cause two Mom's Hands to come down and grab two random enemies.</td>
+                                </tr>
+                              </table>
+
+  </main>
+
+</body>
+
+</html>
